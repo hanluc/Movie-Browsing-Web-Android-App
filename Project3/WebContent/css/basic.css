@@ -1,0 +1,31 @@
+.center h1,
+.center h2{
+    text-align: center;
+}
+
+.center{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letters-container,
+.genres-container{
+    width: auto;
+    margin: 25px auto 0;
+}
+
+.letters{
+    margin: 6px;
+    width: 47px;
+    height: 47px;
+}
+
+.genres{
+    margin: 6px;
+}
+
+.browse-title-genre{
+    margin-top: 25px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://www.google.com/recaptcha/api.js" ></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+	<title>Manager</title>
+
+
+</head>
+<body>
+
+<div class="container">
+	<div class="col-md-12">
+		<div class="page-header"><h1>Login manager's page</h1></div>
+	</div>
+
+	<div class="col-md-4">
+		<form id="login_form" method="post" action="#">   <!-- could access servlet -->
+			<div class="form-group">
+				<label><b>Username</b></label>
+				<input type="email" class="form-control" placeholder="Enter Username" name="username">
+			</div>
+			<br>
+			<div class="form-group">
+				<label><b>Password</b></label>
+				<input type="password" class="form-control" placeholder="Enter Password" name="password">
+			</div>
+			<br>
+			<button type="submit" class="btn btn-primary" value="Login" action="#">Login</button>
+			<br>
+			<div class="g-recaptcha" data-sitekey="6Lc5NlkUAAAAANbTGxBB_rfM0EMW6IDqaIAA2gRq"></div>
+
+
+		</form>
+	</div>
+	<div class = "col-md-5"></div>
+	<div class = "col-md-3"></div>
+</div>
+
+<div class="container">
+	<span id="respond"></span>
+</div>
+
+
+<script src="js/manlogin.js" type='text/javascript'></script>
+
+</body>
+</html>

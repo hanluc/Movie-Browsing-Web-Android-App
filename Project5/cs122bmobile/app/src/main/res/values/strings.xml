@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">cs122bmobile</string>
+    <string name="app_login">Login</string>
+    <string name="enter_email">Enter the user\'s email</string>
+    <string name="enter_password">Enter the password</string>
+    <string name="app_signin">Sign In</string>
+    <string name="enter_title">enter a movie title</string>
+</resources>

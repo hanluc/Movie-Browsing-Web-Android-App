@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Car</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/shoppingcar.js"></script>
+    <style>
+        a{
+            text-decoration:none;
+            color:#000000;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="mainpage.html">
+        <img src="img/icon1.png" width="30" height="30">
+    </a>
+    <a class="navbar-brand" href="mainpage.html">Movie DB</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="mainpage.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="browsing.html">Browsing</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="searching.html">Searching</a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav form-inline my-2 my-lg-0">
+            <a class="nav-link active" href="#" id="username"></a>
+            <button onclick="jumpToAnotherPage('shoppingcar.html')" type="button" class="btn btn-outline-light" id="btn-checkout" style="margin-right: 5px">Checkout</button>
+            <button type="button" class="btn btn-outline-light" id="btn-logout">Logout</button>
+        </ul>
+    </div>
+</nav>
+
+<div id="shopping-cart-all" style="margin-top: 70px;">
+    <div class="container">
+        <h1  style="text-align: center;">Shopping Cart</h1>
+    </div>
+
+    <div id="shopping-cart" class="container border" style="margin-top: 30px;">
+        <!--<table class="table">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th scope="col">#</th>-->
+                <!--<th scope="col">Movie ID</th>-->
+                <!--<th scope="col">Title</th>-->
+                <!--<th scope="col">Number</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th scope="row">1</th>-->
+                <!--<td style="top: 50%;"><a href="browsing.html">Mark</a></td>-->
+                <!--<td style="top: 50%;">Ottossssssssssssssssss</td>-->
+                <!--<td>-->
+                    <!--<button type="button" class="btn btn-light">-</button>-->
+                    <!--<label style="margin: 5px"> 1 </label>-->
+                    <!--<button type="button" class="btn btn-light">+</button>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th scope="row">2</th>-->
+                <!--<td style="top: 50%;"><a href="browsing.html">asdasdasd</a></td>-->
+                <!--<td style="top: 50%;">Ottoasdfasdfdsafsadfasdfsadfasdfasdfsadfsdf</td>-->
+                <!--<td>-->
+                    <!--<button type="button" class="btn btn-light">-</button>-->
+                    <!--<label style="margin: 5px"> 8 </label>-->
+                    <!--<button type="button" class="btn btn-light">+</button>-->
+                    <!--<button style="margin-left: 15px" type="button" class="btn btn-light">x</button>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th scope="row">3</th>-->
+                <!--<td style="top: 50%;"><a href="browsing.html">Mark</a></td>-->
+                <!--<td style="top: 50%;">George</td>-->
+                <!--<td><button type="button" class="btn btn-light">-</button></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+    </div>
+
+    <div class="container" style="margin-top: 30px;">
+        <h1  style="text-align: center;">Transactional Information</h1>
+    </div>
+
+    <div class="container border">
+        <form style="margin: 20px">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="input-first-name">First Name</label>
+                    <input  class="form-control" id="input-first-name" placeholder="Bill">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="input-last-name">Last Name</label>
+                    <input  class="form-control" id="input-last-name" placeholder="Wang">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="input-cardnumber">Card Number</label>
+                <input type="text" class="form-control" id="input-cardnumber" placeholder="XXXX XXXX XXXX XXXX">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="input-year">Year</label>
+                    <input type="text" class="form-control" id="input-year" placeholder="XXXX">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="input-month">Month</label>
+                    <input type="text" class="form-control" id="input-month" placeholder="XX">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="input-month">Day</label>
+                    <input type="text" class="form-control" id="input-day" placeholder="XX">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div style="margin: 0 auto; width: 200px;margin-top: 20px;margin-bottom: 20px">
+        <button class="btn btn-success" onclick="jumpToAnotherPage('browsing.html')">Cancel</button>
+        <button class="btn btn-primary" style="margin-left: 20px" onclick="checkout()">Confirm</button>
+    </div>
+</div>
+
+<div id="confirmation-all" style="margin-top: 70px;" hidden>
+    <div class="container">
+        <h1  style="text-align: center;">Thank for Your Buying, This is the Confirmation!</h1>
+    </div>
+
+    <div id="confirmation" class="container border" style="margin-top: 30px;">
+    </div>
+
+    <div style="margin: 0 auto; width: 200px;margin-top: 20px;margin-bottom: 20px">
+        <button class="btn btn-primary" style="margin-left: 20px" onclick="jumpToAnotherPage('browsing.html')">Confirm</button>
+    </div>
+</div>
+
+
+</body>

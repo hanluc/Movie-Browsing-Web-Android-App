@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>Manager's Page</title>
+
+	<!-- Bootstrap core CSS -->
+	<link
+			href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet">
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link
+			href="https://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+	<script	src="https://getbootstrap.com/docs/3.3/assets/js/ie-emulation-modes-warning.js"></script>
+
+	<link rel="stylesheet"	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet"	href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Manager's page</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="DashBoard.html">Home</a></li>
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-haspopup="true"
+											aria-expanded="false">Add new items<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="DashBoard.html">Add a star</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="addMovie.html">Add new movie</a></li>
+						</ul>
+					</li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#" id="mlogout">Logout <span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</nav>
+
+	<!-- Main component for a primary marketing message or call to action -->
+	<div class="jumbotron col-md-4">
+
+		<div class="page-head" ><h2>Add a star</h2></div>
+		<div class="divider" ></div>
+		<div id="show-message"></div>
+		<form id="insertStar" action="#" method="get">
+			<div class="form-group">
+				<label class="col-form-control" for="starName"> Star Name</label>
+				<input type="text" class="form-contol" id="starName" name="starName">
+			</div>
+
+			<div class="form-group">
+				<label class="col-form-control" for="starYear"> Birth Year</label>
+				<input type="text" class="form-contol" id="starYear" name="starYear"/>
+			</div>
+
+			<button type="submit" class="btn btn-primary" id="submitStar" action="#">Save</button>
+		</form>
+
+		<span id="form-tail"></span>
+		<button class="btn btn-primary" id="back" >Back</button>
+	</div>
+
+
+	<div class="col-md-8">
+		<div class = "col-md-1">
+		</div>
+		<div class = "jumbotron">
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+					<tr>
+						<th>#</th>
+						<th>Table Name</th>
+						<th>Atttribute</th>
+						<th>Type</th>
+					</tr>
+					</thead>
+					<tbody>
+					<div id="table_1">
+						<tr>
+							<td>1</td>
+							<td>creditcards</td>
+							<td>id</td>
+							<td>VARCHAR(20)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>firstname</td>
+							<td>VARCHAR(50)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>lastname</td>
+							<td>VARCHAR(50)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>expiration</td>
+							<td>DATETIME</td>
+						</tr>
+					</div>
+
+					<div id="table_2">
+						<tr>
+							<td>2</td>
+							<td>customers</td>
+							<td>id</td>
+							<td>integer</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>firstname</td>
+							<td>VARCHAR(50)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>lastname</td>
+							<td>VARCHAR(50)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>ccId</td>
+							<td>varchar(20)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>address</td>
+							<td>varchar(200)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>email</td>
+							<td>varchar(50)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>password</td>
+							<td>varchar(20)</td>
+						</tr>
+					</div>
+
+
+					<div id="table_3">
+						<tr>
+							<td>3</td>
+							<td>movies</td>
+							<td>id</td>
+							<td>varchar(10)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>title</td>
+							<td>VARCHAR(100)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>year</td>
+							<td>integer</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>director</td>
+							<td>varchar(100)</td>
+						</tr>
+					</div>
+
+					<div id="table_4">
+						<tr>
+							<td>4</td>
+							<td>stars</td>
+							<td>id</td>
+							<td>varchar(10)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>name</td>
+							<td>VARCHAR(100)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>birthYear</td>
+							<td>integer</td>
+						</tr>
+					</div>
+					<div id="table_5">
+						<tr>
+							<td>5</td>
+							<td>stars_in_movies</td>
+							<td>starId</td>
+							<td>varchar(10)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>movieId</td>
+							<td>VARCHAR(10)</td>
+						</tr>
+					</div>
+					<div id="table_6">
+						<tr>
+							<td>6</td>
+							<td>genres</td>
+							<td>id</td>
+							<td>integer</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>name</td>
+							<td>VARCHAR(32)</td>
+						</tr>
+					</div>
+					<div id="table_7">
+						<tr>
+							<td>7</td>
+							<td>genres_in_movies</td>
+							<td>genreId</td>
+							<td>integer</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>movieId</td>
+							<td>VARCHAR(10)</td>
+						</tr>
+					</div>
+					<div id="table_8">
+						<tr>
+							<td>8</td>
+							<td>sales</td>
+							<td>id</td>
+							<td>integer</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>costomerId</td>
+							<td>integer</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>movieId</td>
+							<td>varchar(10)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>saleDate</td>
+							<td>date</td>
+						</tr>
+					</div>
+					<div id="table_9">
+						<tr>
+							<td>9</td>
+							<td>ratings</td>
+							<td>movieId</td>
+							<td>varchar(10)</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>rating</td>
+							<td>float</td>
+						</tr>
+						<tr>
+							<td> </td>
+							<td> </td>
+							<td>numVotes</td>
+							<td>integer</td>
+						</tr>
+					</div>
+
+
+
+					</tbody>
+				</table>
+
+			</div>
+
+		</div>
+
+
+	</div>
+	<!-- /container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		window.jQuery
+		|| document
+				.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script
+			src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script
+			src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/insertStar.js"></script>
+	<script type="text/javascript" src="js/manlogout.js"></script>
+</body>
+</html>

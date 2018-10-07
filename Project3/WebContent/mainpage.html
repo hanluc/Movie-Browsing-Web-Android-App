@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/basic.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="mainpage.html">
+        <img src="img/icon1.png" width="30" height="30">
+    </a>
+    <a class="navbar-brand" href="mainpage.html">Movie DB</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="mainpage.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="browsing.html">Browsing</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="searching.html">Searching</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav form-inline my-2 my-lg-0">
+            <a class="nav-link active" href="#" id="username"></a>
+            <button onclick="jumpToAnotherPage('shoppingcar.html')" type="button" class="btn btn-outline-light" id="btn-checkout" style="margin-right: 5px">Checkout</button>
+            <button type="button" class="btn btn-outline-light" id="btn-logout">Logout</button>
+        </ul>
+    </div>
+</nav>
+
+<div class="starter">
+    <div class="container">
+        <h1>WELCOME TO MOVIE DB!</h1>
+        <p>
+            <a class="btn btn-primary btn-lg" href="browsing.html"
+               role="button">Let's Begin</a>
+        </p>
+    </div>
+</div>
+
+</body>
